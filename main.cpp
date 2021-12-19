@@ -84,6 +84,8 @@ void inputRead() {
             text += tolower(char_to_read, std::locale());
         }
     }
+    std::cout << "Input text:" << std::endl;
+    std::cout << text << std::endl;
     in.close();
 }
 
@@ -118,8 +120,11 @@ void writeEncodedVersion() {
     encode();
     std::ofstream out;
     out.open(output);
+    std::cout << std::endl;
+    std::cout << "Encoded text:" << std::endl;
     for (int i = 0; i < text.size(); ++i) {
         out << encoded_text[i];
+        std::cout << encoded_text[i];
     }
     out.close();
     delete[] encoded_text;
@@ -145,6 +150,7 @@ int main(int argc, char *argv[]) {
     alphabetGeneration();
     inputRead();
     writeEncodedVersion();
+    std::cout << std::endl;
     std::cout << "Done!";
     return 0;
 }
