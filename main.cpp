@@ -32,8 +32,8 @@ short busy_digits[90] = {0};
 /// </summary>
 void exception() {
     std::cout << "Incorrect command line.\nPlease write: "
-                 "<input_file_name> <output_file_name> <alphabet_file_name>\n"
-                 "Example: 'tests/test1/input.txt tests/test1/output.txt tests/test1/alphabet.txt'";
+                 "./main <input_file_name> <output_file_name> <alphabet_file_name>\n"
+                 "Example: './main tests/test1/input.txt tests/test1/output.txt tests/test1/alphabet.txt'";
     exit(0);
 }
 
